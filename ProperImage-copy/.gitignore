@@ -1,0 +1,106 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.eps
+*.dat
+
+# Documents
+*.pdf
+
+# Graphics
+*.png
+*.eps
+*.ps
+*.dvi
+*.aux
+*.backup
+*.log
+*.x
+
+# Python pyc
+*.pyc
+
+# Geany project files
+properimage_proyect
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+.pytest_cache/
+
+# Selected files
+*~
+._*.map
+._*.dat
+*.npy
+swarp.xml
+default.swarp
+profile*
+.vscode/
+*.ipynb_checkpoints*
+
+# files to ignore in docs
+docs/legacy/
+
+# Fits files
+*.fits
+*.fits.fz
+
+# vscode workspaces
+*.code-workspace
+
+# test images
+result_images/
+.pypirc
+logtesting
+outdata.prof

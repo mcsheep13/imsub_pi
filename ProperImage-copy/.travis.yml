@@ -1,0 +1,41 @@
+dist: xenial
+os: linux
+language: python
+
+before_install:
+  - sudo wget https://github.com/jgm/pandoc/releases/download/2.7.3/pandoc-2.7.3-1-amd64.deb
+  - sudo dpkg -i pandoc-2.7.3-1-amd64.deb
+  - pandoc --version
+
+install:
+  - pip install tox
+  - pip install codecov
+
+script:
+  - tox -r
+
+jobs:
+    include:
+        - python: 3.6
+          env: TOXENV=py36
+        - python: 3.7
+          env: TOXENV=py37
+        - python: 3.8
+          env: TOXENV=py38
+        - python: 3.10
+          env: TOXENV=py310
+
+        - python: 3.10
+          env: TOXENV=style
+        - python: 3.10
+          env: TOXENV=coverage
+        - python: 3.10
+          env: TOXENV=docs
+        - python: 3.10
+          env: TOXENV=docstyle
+        - python: 3.10
+          env: TOXENV=check-manifest
+
+
+after_success:
+    - codecov --token=4022c5c1-b038-4f9b-bf1b-9d3b3d2b4628
